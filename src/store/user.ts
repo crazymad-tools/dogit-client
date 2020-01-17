@@ -18,7 +18,7 @@ export default class UserStore {
         }
       });
   }
-
+  
   @action.bound
   register(payload: { username: string, email: string, password: string }) {
     axios.post("https://api.crazymad.top/api/auth/register/submit", payload).then((res: AxiosResponse) => {
